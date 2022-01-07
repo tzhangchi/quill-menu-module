@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CDN Example</title>
+    <style>
+      .quill-editor,
+      .content {
+        background-color: white;
+      }
+
+      .editor {
+        height: 500px;
+      }
+    </style>
+    <link href="https://cdn.quilljs.com/1.3.4/quill.core.css" rel="stylesheet" />
+    <link href="https://cdn.quilljs.com/1.3.4/quill.snow.css" rel="stylesheet" />
+    <link href="https://cdn.quilljs.com/1.3.4/quill.bubble.css" rel="stylesheet" />
+  </head>
+  <body>
+    <script src="https://cdn.quilljs.com/1.3.4/quill.js"></script>
+    <script src="./../dist/quill-menu-module.umd.js"></script>
+    <div class="quill-editor">
+      <div id="editor"></div>
+    </div>
+    <script>
+      new Quill(document.getElementById('editor'), {
+        modules: { toolbar: true },
+        theme: 'snow'
+      })
+    </script>
+  </body>
+</html>
