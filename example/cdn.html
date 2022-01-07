@@ -26,8 +26,14 @@
       <div id="editor"></div>
     </div>
     <script>
+      Quill.register(
+        {
+          'modules/menu': quillMenuModule
+        },
+        true
+      )
       new Quill(document.getElementById('editor'), {
-        modules: { toolbar: true },
+        modules: { toolbar: true, menu: true },
         theme: 'snow'
       })
     </script>
