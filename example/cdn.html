@@ -33,9 +33,10 @@
         },
         true
       )
-      new Quill(document.getElementById('editor'), {
+      window.quill = new Quill(document.getElementById('editor'), {
         modules: { toolbar: true, menu: true },
-        theme: 'snow'
+        theme: 'snow',
+        placeholder: `Description or type " / " for commands`
       })
     </script>
   </body>
